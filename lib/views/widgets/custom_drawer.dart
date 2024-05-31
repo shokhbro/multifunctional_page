@@ -51,15 +51,35 @@ class CustomDrawer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text("Hotels"),
-                Text("Motel"),
-                Text("Cofe"),
+                Text(
+                  "Menu",
+                  style: TextStyle(
+                    fontFamily: 'Lato',
+                  ),
+                ),
+                Text(
+                  "Hotel",
+                  style: TextStyle(
+                    fontFamily: 'Lato',
+                  ),
+                ),
+                Text(
+                  "Motel",
+                  style: TextStyle(
+                    fontFamily: 'Lato',
+                  ),
+                ),
               ],
             ),
           ),
           ListTile(
             onTap: () => _showPinCodeDialog(context),
-            title: const Text("Settings"),
+            title: const Text(
+              "Settings",
+              style: TextStyle(
+                fontFamily: 'Lato',
+              ),
+            ),
             trailing: const Icon(Icons.keyboard_arrow_right),
           ),
           ListTile(
@@ -72,7 +92,12 @@ class CustomDrawer extends StatelessWidget {
                 );
               }));
             },
-            title: const Text("Home Page"),
+            title: const Text(
+              "Home Page",
+              style: TextStyle(
+                fontFamily: 'Lato',
+              ),
+            ),
             trailing: const Icon(Icons.keyboard_arrow_right),
           ),
         ],

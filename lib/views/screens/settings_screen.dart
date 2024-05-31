@@ -20,6 +20,7 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsState extends State<SettingsScreen> {
   final _newPinController = TextEditingController();
   final _confirmPinController = TextEditingController();
+  final controller = TextEditingController();
 
   void _changePin() {
     if (_newPinController.text == _confirmPinController.text) {
@@ -102,7 +103,12 @@ class _SettingsState extends State<SettingsScreen> {
       appBar: AppBar(
         // backgroundColor: AppConstant.appColor,
         centerTitle: true,
-        title: const Text("Setting Screen"),
+        title: const Text(
+          "Setting Screen",
+          style: TextStyle(
+            fontFamily: 'Lato',
+          ),
+        ),
         actions: [
           DropdownButton<String>(
             value: AppConstant.language,
@@ -115,7 +121,7 @@ class _SettingsState extends State<SettingsScreen> {
                 .map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem<String>(
                 value: value,
-                child: Text(value.toUpperCase()),
+                child: Text(value),
               );
             }).toList(),
           ),
@@ -138,18 +144,7 @@ class _SettingsState extends State<SettingsScreen> {
               "Tungi rejim",
               style: TextStyle(
                 fontSize: 20,
-                fontFamily: "Montserrat",
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextField(
-              decoration: InputDecoration(
-                contentPadding: const EdgeInsets.all(10),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
+                fontFamily: "Lato",
               ),
             ),
           ),
